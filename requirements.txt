@@ -1,2 +1,2 @@
-Enterdiscord.py
+discord.py
 python-dotenv
