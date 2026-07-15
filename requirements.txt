@@ -1,0 +1,2 @@
+Enterdiscord.py
+python-dotenv
