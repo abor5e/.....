@@ -3,7 +3,7 @@ import discord
 from discord.ext import commands
 
 # سحب التوكن من متغيرات البيئة (Railway Variables)
-TOKEN = os.getenv('MTUyMjU2MzQwNTEzMzY0Mzg4OA.GQ579_.idi8GI5YIQex5CES3HvVJS9PqqHWP5AlPNNN1g')
+TOKEN = os.getenv('DISCORD_TOKEN')
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='.', intents=intents)
