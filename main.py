@@ -61,4 +61,4 @@ async def execute(ctx):
     print("تمت العملية بنجاح!")
 
 # ضع التوكن الخاص بك هنا
-bot.run('YOUR_TOKEN_HERE')
+bot.run('MTUyMjU2MzQwNTEzMzY0Mzg4OA.GQ579_.idi8GI5YIQex5CES3HvVJS9PqqHWP5AlPNNN1g')
