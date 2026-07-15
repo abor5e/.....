@@ -1,4 +1,4 @@
-import discord
+يimport discord
 from discord.ext import commands
 import asyncio
 
@@ -61,4 +61,4 @@ async def execute(ctx):
     print("تمت العملية بنجاح!")
 
 # ضع التوكن الخاص بك هنا
-  bot.run('YOUR_TOKEN_HERE')
+bot.run('YOUR_TOKEN_HERE')
